@@ -1,0 +1,29 @@
+<?php //%255BApp%255CDocument%255CCatalogue%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ODM\\MongoDB\\Mapping\\Annotations\\Document'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ODM\\MongoDB\\Mapping\\Annotations\\Document')),
+        clone ($p['Doctrine\\Bundle\\MongoDBBundle\\Validator\\Constraints\\Unique'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\Bundle\\MongoDBBundle\\Validator\\Constraints\\Unique')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'collection' => [
+                'Catalogue',
+            ],
+            'fields' => [
+                1 => 'name',
+            ],
+            'groups' => [
+                1 => [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+); }];
