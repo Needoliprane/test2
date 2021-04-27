@@ -201,7 +201,7 @@ class CartController extends AbstractController
         try {
             $this->checkIfUserCartIsCreated($Userid, $dm);
             $cart = $dm->getRepository(Cart::class)->findOneBy(['userId' => $Userid]);
-            $cart->setProductsId(str_replace($id, "", $cart->getProductsId()));
+            $cart->setProductsId(preg_replace('/'.$id.'/', "", $cart->getProductsId(), 1));
             $dm->persist($cart);
             $dm->flush();
             return new JsonResponse([
